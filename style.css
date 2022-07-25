@@ -2,7 +2,7 @@
   --primary-color: #442eaf;
 }
 * {
-  transition: 0s;
+  transition: 2s;
 }
 .body {
   position: absolute;
