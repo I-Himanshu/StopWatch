@@ -1,0 +1,139 @@
+:root {
+  --primary-color: #442eaf;
+}
+* {
+  transition: 0s;
+}
+.body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  padding-top: 10vh;
+  width: 100vw;
+  background: linear-gradient(to top, #eee, #ddd);
+  background: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+  flex-wrap: wrap;
+}
+#bookmarks {
+  max-height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  overflow-x: visible;
+  padding: 2vh;
+}
+#bookmarks::-webkit-scrollbar {
+  display: none;
+}
+.box {
+  background-color: #fff;
+  padding: 2vh 7vh;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  border-radius: 3vh;
+}
+.bookmark {
+  background-color: #fff;
+  padding: 2vh 7vh;
+  display: flex;
+  justify-content: right;
+  position: relative;
+  border-radius: 3vh;
+  box-shadow: inset 3px 3px 5px var(--primary-color),
+    inset -3px -3px 5px var(--primary-color), 0 0 10px white;
+  font-weight: bolder;
+  color: transparent;
+  text-shadow: 0 0 3px var(--primary-color);
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  margin-top: 1vh;
+  transition: 1s;
+  background: #000;
+  padding: 0 7vh;
+}
+.bookmark button{
+    background-color: transparent;
+    border:none;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 1.4em;
+}
+.bookmark:hover {
+  background: #fff;
+  color: black;
+  -webkit-text-stroke: 1px rgb(16, 15, 15);
+}
+.title {
+  border: 0px solid;
+  height: 10vh;
+  width: 10vh;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -10%);
+  background: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 7vh;
+  vertical-align: middle;
+  line-height: 7vh;
+}
+.title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translatex(-50%);
+  width: 3px;
+  height: 50%;
+  background-color: red;
+  z-index: -12;
+}
+.rotationAnim {
+  animation: rotation 2s linear infinite;
+}
+@keyframes rotation {
+  0% {
+    transform: rotateX(0);
+  }
+  100% {
+    transform: rotatey(360deg);
+  }
+}
+.time {
+  margin-top: 10vh;
+  font-size: 2em;
+  color: transparent;
+  -webkit-text-stroke: 1.4px var(--primary-color);
+  filter: hue-rotate(100deg);
+  mix-blend-mode: multiply;
+}
+.controls {
+  display: flex;
+  justify-content: space-between;
+  font-size: 5em;
+}
+.controls button {
+  font-size: 4vh;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  transition: 300ms;
+  cursor: pointer;
+}
+.controls .play-pause:active {
+  transform: scale(0.7);
+}
+.reset:active {
+  transform: scale(0.7) rotateZ(-360deg);
+  transition: 0s;
+}

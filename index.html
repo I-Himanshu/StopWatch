@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Just A simple stopwatch to record time with auto color changer and reset button and also time bookmark, created for fun by himanshu" />
+    <meta name="keywords" content="Stopwatch, auto color changer, i-himanshu, @admlnxd, maskman, time record" />
+    <meta name="author" content="Himanshu Kumar" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="body">
+      <div class="box">
+        <div class="title">
+          <p class="eye">❤️</p>
+        </div>
+        <p class="time">00:00:00</p>
+        <div class="controls">
+          <button id="playPause" class="play-pause play">▶️</button>
+          <button onclick="reset(this)" class="reset">♻️</button>
+          <button class="add" onclick="add()">➕</button>
+        </div>
+      </div>
+      <div id="bookmarks"></div> 
+    </div>
+    <!-- This Project Is Created By Himanshu -->
+    <script src="script.js"></script>
+  </body>
+</html>
