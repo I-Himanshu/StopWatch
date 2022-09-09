@@ -3,9 +3,7 @@ var timeBox = document.querySelector(".time");
 var eye = document.querySelector(".title .eye");
 var body = document.querySelector(".body");
 
-var min = 0,
-  sec = 0,
-  mili = 0;
+var min = 0,sec = 0,mili = 0;
 var INTERVAL;
 var audio = new Audio("click.mp3");
 playPause.addEventListener("click", () => {
